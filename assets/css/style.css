@@ -99,7 +99,7 @@ h6 {
 /* Sections Header
 --------------------------------*/
 .section-header {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   position: relative;
   padding-bottom: 20px;
 }
@@ -652,11 +652,10 @@ h6 {
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background: url("../img/about-bg.jpg");
   background-size: cover;
   overflow: hidden;
   position: relative;
-  color: #fff;
+  color: black;
   padding: 60px 0 40px 0;
 }
 
@@ -668,7 +667,6 @@ h6 {
 
 #about:before {
   content: "";
-  background: rgba(13, 20, 41, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -680,7 +678,7 @@ h6 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #fff;
+  color: black;
 }
 
 #about h3 {
@@ -688,18 +686,29 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #fff;
+  color: black;
 }
 
 #about p {
   font-size: 14px;
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
 }
 
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
+.committee-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.committee{
+  width: 300px;
+  height: 350px;
+  margin-top: 5rem;
+}
 #speakers {
   padding: 60px 0 30px 0;
 }
@@ -750,6 +759,12 @@ h6 {
 
 #speakers .speaker .details a:hover {
   color: #f82249;
+}
+
+#speakers .speaker img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
 }
 
 #speakers .speaker:hover .details {
