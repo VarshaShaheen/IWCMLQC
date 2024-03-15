@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: darkblue;
+  color: #d50a08;
   text-decoration: none;
   transition: 0.5s;
 }
@@ -24,7 +24,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: darkblue;
+  color: #d50a08;
   outline: none;
   text-decoration: none;
 }
@@ -72,7 +72,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: darkblue;
+  background: #d50a08;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -109,7 +109,7 @@ h6 {
   display: block;
   width: 60px;
   height: 5px;
-  background: darkblue;
+  background: #d50a08;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -164,7 +164,7 @@ h6 {
 }
 
 #header #logo h1 span {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #header #logo h1 a,
@@ -189,11 +189,11 @@ h6 {
 --------------------------------------------------------------*/
 .buy-tickets {
   color: #fff;
-  background: darkblue;
+  background: #d50a08;
   padding: 7px 22px;
   margin: 0 0 0 15px;
   border-radius: 50px;
-  border: 2px solid darkblue;
+  border: 2px solid #d50a08;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   line-height: 1;
@@ -272,7 +272,7 @@ h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: darkblue;
+  background-color: #d50a08;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -324,7 +324,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: darkblue;
+  color: #d50a08;
 }
 
 .navbar .dropdown:hover>ul {
@@ -429,7 +429,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: darkblue;
+  color: #d50a08;
 }
 
 .navbar-mobile .getstarted,
@@ -464,20 +464,71 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: darkblue;
+  color: #d50a08;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+.cube-container {
+  perspective: 1000px;
+  position: relative;
+}
+
+.cube {
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+  top: 20vh; /* Adjust based on your layout */
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Only the border is visible */
+  box-sizing: border-box;
+}
+
+/* Adjust these transforms based on the cube's correct orientation */
+.front  { transform: rotateY(0deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+.corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: sparkle 1s infinite alternate;
+}
+
+.top-left { top: -5px; left: -5px; }
+.top-right { top: -5px; right: -5px; }
+.bottom-left { bottom: -5px; left: -5px; }
+.bottom-right { bottom: -5px; right: -5px; }
+
+@keyframes rotate {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+@keyframes sparkle {
+  0% { box-shadow: 0 0 8px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 12px rgba(255,255,255,0.2); }
+  100% { box-shadow: 0 0 0 rgba(255,255,255,0), 0 0 0 rgba(255,255,255,0), 0 0 0 rgba(255,255,255,0); background-color: #0000; }
+}
+
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero.jpeg) top center;
+  background: black;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -528,7 +579,9 @@ h6 {
 }
 
 #hero h1 span {
-  color: #2a2ae7;
+  color: #d50a08;
+  opacity: 100%;
+  z-index: 100;
 }
 
 @media (max-width: 991px) {
@@ -552,7 +605,7 @@ h6 {
 #hero .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(darkblue 50%, rgba(101, 111, 150, 0.15) 52%);
+  background: radial-gradient(#d50a08 50%, rgba(101, 111, 150, 0.15) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -593,7 +646,7 @@ h6 {
 }
 
 #hero .play-btn:hover::after {
-  border-left: 15px solid darkblue;
+  border-left: 15px solid #d50a08;
   transform: scale(20);
 }
 
@@ -627,11 +680,11 @@ h6 {
   margin: 10px;
   color: #fff;
   animation-delay: 0.8s;
-  border: 2px solid darkblue;
+  border: 2px solid #d50a08;
 }
 
 #hero .about-btn:hover {
-  background: darkblue;
+  background: #d50a08;
   color: #fff;
 }
 
@@ -756,7 +809,7 @@ h6 {
 }
 
 #speakers .speaker .details a:hover {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #speakers .speaker img {
@@ -799,7 +852,7 @@ h6 {
 }
 
 #speakers-details .details .social a:hover {
-  background: darkblue;
+  background: #d50a08;
   color: #fff;
 }
 
@@ -862,7 +915,7 @@ h6 {
 }
 
 #schedule .nav-tabs a.active {
-  background-color: darkblue;
+  background-color: #d50a08;
   color: #fff;
 }
 
@@ -1042,7 +1095,7 @@ h6 {
 }
 
 #hotels a:hover {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #hotels .stars {
@@ -1080,11 +1133,11 @@ h6 {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid darkblue;
+  border: 1px solid #d50a08;
 }
 
 #gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: darkblue;
+  background-color: #d50a08;
 }
 
 #gallery .swiper-slide-active {
@@ -1097,7 +1150,7 @@ h6 {
   }
 
   #gallery .swiper-slide-active {
-    border: 5px solid darkblue;
+    border: 5px solid #d50a08;
     padding: 4px;
     background: #fff;
     z-index: 1;
@@ -1160,7 +1213,7 @@ h6 {
 #faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: darkblue;
+  font-family: #d50a08;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1191,7 +1244,7 @@ h6 {
 }
 
 #faq .faq-list .collapsed:hover {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #faq .faq-list .collapsed .icon-show {
@@ -1257,7 +1310,7 @@ h6 {
   border: 0;
   padding: 9px 25px;
   cursor: pointer;
-  background: darkblue;
+  background: #d50a08;
   color: #fff;
   transition: all 0.3s ease;
   outline: none;
@@ -1322,7 +1375,7 @@ h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: darkblue;
+  background-color: #d50a08;
   border: 0;
   color: #fff;
 }
@@ -1341,7 +1394,7 @@ h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: darkblue;
+  background-color: #d50a08;
   border: 0;
   color: #fff;
 }
@@ -1366,7 +1419,7 @@ h6 {
   font-size: 48px;
   display: inline-block;
   margin-bottom: 10px;
-  color: darkblue;
+  color: #d50a08;
 }
 
 #contact .contact-info address,
@@ -1388,7 +1441,7 @@ h6 {
 }
 
 #contact .contact-info a:hover {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #contact .contact-address,
@@ -1463,7 +1516,7 @@ h6 {
 
 #contact .php-email-form input:focus,
 #contact .php-email-form textarea:focus {
-  border-color: darkblue;
+  border-color: #d50a08;
 }
 
 #contact .php-email-form input {
@@ -1475,7 +1528,7 @@ h6 {
 }
 
 #contact .php-email-form button[type=submit] {
-  background: darkblue;
+  background: #d50a08;
   border: 0;
   padding: 10px 40px;
   color: #fff;
@@ -1561,7 +1614,7 @@ h6 {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: darkblue;
+  background: #d50a08;
   color: #fff;
 }
 
@@ -1572,7 +1625,7 @@ h6 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid darkblue;
+  border-bottom: 2px solid #d50a08;
 }
 
 #footer .footer-top .footer-links {
@@ -1587,7 +1640,7 @@ h6 {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 5px;
-  color: darkblue;
+  color: #d50a08;
   font-size: 18px;
 }
 
@@ -1605,7 +1658,7 @@ h6 {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: darkblue;
+  color: #d50a08;
 }
 
 #footer .footer-top .footer-contact {
@@ -1627,7 +1680,7 @@ h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type=submit] {
-  background: darkblue;
+  background: #d50a08;
   border: 0;
   width: 35%;
   padding: 6px 0;
