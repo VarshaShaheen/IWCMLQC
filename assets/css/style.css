@@ -146,11 +146,11 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  background: black;
 }
 
 #header.header-scrolled,
 #header.header-inner {
-  background: rgba(6, 12, 34, 0.98);
   height: 70px;
 }
 
@@ -1613,6 +1613,7 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2vh;
 }
 
 #footer .footer-top .social-links a i {
