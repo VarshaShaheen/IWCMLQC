@@ -59,7 +59,7 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
+  background: #fff url("../img/logo_cusat.png") no-repeat center center;
 }
 
 /*--------------------------------------------------------------
@@ -302,7 +302,7 @@ h6 {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
 
@@ -446,7 +446,7 @@ h6 {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25);
 }
 
 .navbar-mobile .dropdown ul li {
@@ -564,11 +564,7 @@ h6 {
   padding: 0 15px;
 }
 
-@media (max-width: 991px) {
-  #hero .hero-container {
-    top: 100px;
-  }
-}
+
 
 #hero h1 {
   color: #fff;
@@ -584,23 +580,10 @@ h6 {
   z-index: 100;
 }
 
-@media (max-width: 991px) {
-  #hero h1 {
-    font-size: 34px;
-    margin-top: 47vh;
-  }
-}
-
 #hero p {
   color: #ebebeb;
   font-weight: 700;
   font-size: 20px;
-}
-
-@media (max-width: 991px) {
-  #hero p {
-    font-size: 16px;
-  }
 }
 
 #hero .play-btn {
@@ -635,9 +618,7 @@ h6 {
   height: 120px;
   animation-delay: 0s;
   animation: pulsate-btn 2s;
-  animation-direction: forwards;
   animation-iteration-count: infinite;
-  animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
   border: 2px solid rgba(163, 163, 163, 0.4);
@@ -687,6 +668,21 @@ h6 {
 #hero .about-btn:hover {
   background: #4287f5;
   color: #fff;
+}
+
+@media (max-width: 991px) {
+  #hero .hero-container {
+    top: 70px;;
+  }
+  #hero h1 {
+    font-size: 21px;
+  }
+  #hero p {
+    font-size: 14px;
+  }
+  #hero .about-btn {
+    padding: 12px 12px;
+  }
 }
 
 @keyframes pulsate-btn {
@@ -849,7 +845,6 @@ h6 {
   background: #e9edfb;
   color: #112363;
   line-height: 1;
-  display: inline-block;
   text-align: center;
   border-radius: 50%;
   width: 36px;
@@ -1223,7 +1218,6 @@ h6 {
 #faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #4287f5;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1608,7 +1602,6 @@ h6 {
 }
 
 #footer .footer-top .social-links a {
-  display: inline-block;
   background: #222636;
   color: #eee;
   line-height: 1;
