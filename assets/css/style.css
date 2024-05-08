@@ -566,7 +566,7 @@ h6 {
 
 @media (max-width: 991px) {
   #hero .hero-container {
-    top: 70px;
+    top: 100px;
   }
 }
 
@@ -587,6 +587,7 @@ h6 {
 @media (max-width: 991px) {
   #hero h1 {
     font-size: 34px;
+    margin-top: 47vh;
   }
 }
 
@@ -1058,6 +1059,8 @@ h6 {
 
 #venue .venue-gallery img {
   transition: all ease-in-out 0.4s;
+  height: 17rem;
+  width: 500px;
 }
 
 #venue .venue-gallery:hover img {
@@ -1333,6 +1336,9 @@ h6 {
   #subscribe button {
     margin-top: 10px;
   }
+  #venue .venue-gallery img {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1471,6 +1477,7 @@ h6 {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   }
+
 }
 
 #contact .php-email-form .error-message {
