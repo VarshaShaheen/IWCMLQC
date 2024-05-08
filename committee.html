@@ -27,34 +27,22 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/new_style.css" rel="stylesheet">
+
+    <script>
+        // header.js
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('header').innerHTML = html);
+
+        // footer.js
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
 </head>
+
 <body>
-<!-- ======= Header ======= -->
-<header id="header" class="d-flex align-items-center " style="background: black">
-    <div class="container-fluid container-xxl d-flex align-items-center">
-
-        <div id="logo" class="me-auto">
-            <a href="index.html" class="scrollto logo_header"><img src="assets/img/logo_cusat.png" alt="" title=""></a>
-            <a href="index.html" class="scrollto logo_header" style="margin-left: 10px"><img
-                    src="assets/img/logo/logo_gri.png" alt="" title=""></a>
-        </div>
-
-        <nav id="navbar" class="navbar order-last order-lg-0">
-            <ul>
-                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-                <li><a class="nav-link scrollto active" href="committee.html">Committee</a></li>
-<!--                <li><a class="nav-link scrollto" href="#">Call for Papers</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#">Paper Submission</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#">IWCMTMLQC-2024</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#">Conference</a></li>-->
-<!--                <li><a class="nav-link scrollto" href="#">Workshops</a></li>-->
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-<!--        <a class="buy-tickets scrollto" href="#">Buy Tickets</a>-->
-
-    </div>
-</header><!-- End Header -->
+<div id="header"></div>
 
 <!-- ======= Speakers Section ======= -->
 <section id="speakers" style="margin-top: 100px">
@@ -263,61 +251,7 @@
 
 </section><!-- End Speakers Section -->
 
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6 footer-info">
-                    <img src="assets/img/logo_cusat.png" alt="cusat_logo">
-                    <img src="assets/img/logo/logo_gri.png" style="margin-left: 10px" alt="" title="logo">
-                    <!--            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam-->
-                    <!--              vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus.-->
-                    <!--              Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>-->
-                </div>
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="https://cusat.ac.in/">CUSAT official
-                            website</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="https://maths.cusat.ac.in/">Department of
-                            Mathematics, CUSAT</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>
-                        A108 Adam Street <br>
-                        New York, NY 535022<br>
-                        United States <br>
-                        <strong>Phone:</strong> +1 5589 55488 55<br>
-                        <strong>Email:</strong> info@example.com<br>
-                    </p>
-
-                    <div class="social-links">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="copyright">
-            &copy; Copyright <strong>Department of Mathematics CUSAT</strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <a href="https://bootstrapmade.com/"></a>
-        </div>
-    </div>
-</footer><!-- End  Footer -->
+<div id="footer"></div>
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
